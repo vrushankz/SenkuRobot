@@ -75,6 +75,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hi {}, my name is {}! 
 I am an Anime themed group management bot.
+Build by weebs for weebs, I specialize in managing anime and similar themed groups.
 You can find my list of available commands with /help.
 """
 
@@ -91,10 +92,10 @@ HELP_STRINGS = """
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-SAITAMA_IMG = "https://telegra.ph/file/1457a7335471827a77df9.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/1457a7335471827a77df9.png"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via donating to @Vrushankz ."""
+ You can support the project by donating to @Vrushankz."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -211,26 +212,26 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                         InlineKeyboardButton(
-                            text=" Add Me ",
+                            text=" 👑 Summon Me ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                          InlineKeyboardButton(
-                             text=" Updates ",
+                             text=" 🔔 Updates ",
                              url="https://t.me/SakumiNews")
                      ],
                      [
                         InlineKeyboardButton(
-                            text="Help ",
-                            url="https://t.me/Tedeza_bot?start=help"),
+                            text=" ✨ Help ",
+                            url="https://t.me/SenkuRobot?start=help"),
                          InlineKeyboardButton(
                             text=" ⚡️ Get Started ",
-                             url="https://t.me/Sakumi_Support")        
+                             url="https://t.me/SakumiNews")        
                        
                      ],
                      [
                         InlineKeyboardButton(
                              text=" ❤️ Source Code ",
-                             url="https://Vrushankz")
+                             url="https://github.com/FtSasaki/SenkuRobot")
                     
                     ]
                    ]
