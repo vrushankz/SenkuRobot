@@ -216,7 +216,7 @@ def start(update: Update, context: CallbackContext):
                                 context.bot.username)),
                          InlineKeyboardButton(
                              text=" Updates ",
-                             url="https://t.me/Tedeza_support")
+                             url="https://t.me/SakumiNews")
                      ],
                      [
                         InlineKeyboardButton(
@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
                             url="https://t.me/Tedeza_bot?start=help"),
                          InlineKeyboardButton(
                             text=" ⚡️ Get Started ",
-                             url="https://t.me/Tedeza_support")        
+                             url="https://t.me/Sakumi_Support")        
                        
                      ],
                      [
