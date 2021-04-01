@@ -216,15 +216,15 @@ def start(update: Update, context: CallbackContext):
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                          InlineKeyboardButton(
-                             text=" 🔔 Updates ",
-                             url="https://t.me/SakumiNews")
+                             text=" ⚜️ Support ",
+                             url="https://t.me/tedeza_support")
                      ],
                      [
                         InlineKeyboardButton(
                             text=" ✨ Help ",
-                            url="https://t.me/SenkuRobot?start=help"),
+                            url="https://t.me/Tedeza_bot?start=help"),
                          InlineKeyboardButton(
-                            text=" ⚡️ Get Started ",
+                            text=" ⚡️ Updates ",
                              url="https://t.me/SakumiNews")        
                        
                      ],
