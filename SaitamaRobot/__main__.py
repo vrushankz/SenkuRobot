@@ -80,7 +80,7 @@ You can find my list of available commands with /help.
 """
 
 HELP_STRINGS = """
-*Main* commands available [:](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+*Main* commands available [:](https://telegra.ph/file/1706e6070b7e48eb28594.jpg)
 
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
