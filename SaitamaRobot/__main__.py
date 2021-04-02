@@ -212,26 +212,26 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                         InlineKeyboardButton(
-                            text=" 👑 Add Me ",
+                            text=" 👑 Add Me 👑 ",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username)),
                          InlineKeyboardButton(
-                             text=" ⚜️ Support ",
+                             text=" ⚜️ Support ⚜️ ",
                              url="https://t.me/tedeza_support")
                      ],
                      [
                         InlineKeyboardButton(
-                            text=" ✨ Help ",
+                            text=" ✨ Help ✨ ",
                             url="https://t.me/Tedeza_bot?start=help"),
                          InlineKeyboardButton(
-                            text=" ⚡️ Updates ",
+                            text=" 📢 Updates 📢",
                              url="https://t.me/Tedeza_news")        
                        
                      ],
                      [
                         InlineKeyboardButton(
-                             text=" ❤️ Source Code ",
-                             url="https://t.me/Vrushankz")
+                             text=" ⚡ Gban Logs ⚡ ",
+                             url="https://t.me/Tedeza_banlogs")
                     
                     ]
                    ]
