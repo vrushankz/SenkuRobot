@@ -33,6 +33,7 @@ from SaitamaRobot import (
 from SaitamaRobot.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
+    dev_plus,
     user_admin,
 )
 from SaitamaRobot.modules.helper_funcs.extraction import (
@@ -388,7 +389,7 @@ def ungban(update: Update, context: CallbackContext):
 
 
 @run_async
-@support_plus
+@dev_plus
 def gbanlist(update: Update, context: CallbackContext):
     banned_users = sql.get_gban_list()
 
