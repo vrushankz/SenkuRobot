@@ -217,7 +217,7 @@ def start(update: Update, context: CallbackContext):
                                 context.bot.username)),
                          InlineKeyboardButton(
                              text=" ⚜️ Support ⚜️ ",
-                             url="https://t.me/tedeza_support")
+                             url="https://t.me/tedezasupportchat")
                      ],
                      [
                         InlineKeyboardButton(
@@ -231,7 +231,7 @@ def start(update: Update, context: CallbackContext):
                      [
                         InlineKeyboardButton(
                              text=" ⚡ Gban Logs ⚡ ",
-                             url="https://t.me/Tedeza_banlogs")
+                             url="https://t.me/Tedeza_logs")
                     
                     ]
                    ]
