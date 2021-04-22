@@ -230,7 +230,7 @@ def start(update: Update, context: CallbackContext):
                      ],
                      [
                         InlineKeyboardButton(
-                             text=" ⚡ Gban Logs ⚡ ",
+                             text=" ⚡ Global Logs ⚡ ",
                              url="https://t.me/Tedeza_logs")
                     
                     ]
