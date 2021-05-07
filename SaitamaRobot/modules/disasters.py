@@ -247,22 +247,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Sudo User, Demoting to Whitelist."
+        rt += "This member is a Sudo User, Demoting to Immune user."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Support User, Demoting to Whitelist."
+        rt += "This user is already a Support User, Demoting to Immune user."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Wolf Disaster, Demoting to Whitelist."
+        rt += "This user is already a Wolf Disaster, Demoting to Immune user."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Whitelist.")
+        message.reply_text("This user is already a Immune user.")
         return ""
 
     data["tigers"].append(user_id)
@@ -350,7 +350,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested to demote this user to Normal User)
+        message.reply_text("Requested to demote this user to Normal User")
         DEMONS.remove(user_id)
         data["supports"].remove(user_id)
 
