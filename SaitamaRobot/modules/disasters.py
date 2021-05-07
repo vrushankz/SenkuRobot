@@ -112,7 +112,7 @@ def addsudo(update: Update, context: CallbackContext) -> str:
 
 
 @run_async
-@sudo_plus
+@dev_plus
 @gloggable
 def addsupport(
     update: Update,
@@ -171,7 +171,7 @@ def addsupport(
 
 
 @run_async
-@sudo_plus
+@dev_plus
 @gloggable
 def addwhitelist(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
@@ -247,22 +247,22 @@ def addtiger(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is a Dragon Disaster, Demoting to Tiger."
+        rt += "This member is a Sudo User, Demoting to Whitelist."
         data["sudos"].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is already a Demon Disaster, Demoting to Tiger."
+        rt += "This user is already a Support User, Demoting to Whitelist."
         data["supports"].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is already a Wolf Disaster, Demoting to Tiger."
+        rt += "This user is already a Wolf Disaster, Demoting to Whitelist."
         data["whitelists"].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Tiger.")
+        message.reply_text("This user is already a Whitelist.")
         return ""
 
     data["tigers"].append(user_id)
@@ -307,7 +307,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested HA to demote this user to Civilian")
+        message.reply_text("Requested to demote this user to Normal User)
         DRAGONS.remove(user_id)
         data["sudos"].remove(user_id)
 
@@ -331,7 +331,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
 
 
 @run_async
-@sudo_plus
+@dev_plus
 @gloggable
 def removesupport(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
@@ -350,7 +350,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested HA to demote this user to Civilian")
+        message.reply_text("Requested to demote this user to Normal User)
         DEMONS.remove(user_id)
         data["supports"].remove(user_id)
 
@@ -374,7 +374,7 @@ def removesupport(update: Update, context: CallbackContext) -> str:
 
 
 @run_async
-@sudo_plus
+@dev_plus
 @gloggable
 def removewhitelist(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
@@ -416,7 +416,7 @@ def removewhitelist(update: Update, context: CallbackContext) -> str:
 
 
 @run_async
-@sudo_plus
+@dev_plus
 @gloggable
 def removetiger(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
@@ -460,7 +460,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Wolf Disasters 🐺:</b>\n"
+    reply = "<b>Known Whitelist Users :</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -479,7 +479,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Tiger Disasters 🐯:</b>\n"
+    reply = "<b>Known Immune Users:</b>\n"
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
@@ -501,7 +501,7 @@ def supportlist(update: Update, context: CallbackContext):
     m = update.effective_message.reply_text(
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
-    reply = "<b>Known Demon Disasters 👹:</b>\n"
+    reply = "<b>Known Support Users:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -520,7 +520,7 @@ def sudolist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Dragon Disasters 🐉:</b>\n"
+    reply = "<b>Known Sudo Users:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -539,7 +539,7 @@ def devlist(update: Update, context: CallbackContext):
         "<code>Gathering intel..</code>", parse_mode=ParseMode.HTML
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Hero Association Members ⚡️:</b>\n"
+    reply = "<b>Dev Users:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
