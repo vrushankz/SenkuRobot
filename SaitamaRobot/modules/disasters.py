@@ -307,7 +307,7 @@ def removesudo(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested to demote this user to Normal User)
+        message.reply_text("Requested to demote this user to Normal User")
         DRAGONS.remove(user_id)
         data["sudos"].remove(user_id)
 
